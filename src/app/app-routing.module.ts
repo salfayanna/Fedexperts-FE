@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'forum/biology', component: BiologyComponent },
   { path: 'newhomework', component: NewhomeworkComponent},
   {path: 'registration', component: RegisterComponent},
-  {path: '', redirectTo: '/', pathMatch: 'full'},
+  {path: '', redirectTo: '/', pathMatch: 'full'},]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
