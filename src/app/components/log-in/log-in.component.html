@@ -1,11 +1,11 @@
 <div>
   <h1>Login</h1>
   <form action="">
-    <p>E-mail</p>
-    <input #email type="email"><br>
+    <p>Username</p>
+    <input #username type="text"><br>
     <p>Password</p>
     <input #password type="password" name="" id=""><br>
     <a [routerLink]="['/registration']">Not a member? Let's sign up!</a><br>
-    <button (click)="login(email.value, password.value)">Login</button>
+    <button (click)="login(username.value, password.value)">Login</button>
   </form>
 </div>

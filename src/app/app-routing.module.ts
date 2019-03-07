@@ -9,6 +9,8 @@ import { MathComponent } from './components/math/math.component';
 import { GeographyComponent } from './components/geography/geography.component';
 import { BiologyComponent } from './components/biology/biology.component';
 import { NewhomeworkComponent } from './components/newhomework/newhomework.component';
+import { CommentComponent } from './components/comment/comment.component';
+import { PostComponent } from './components/post/post.component';
 import { HomeworkComponent } from './components/homework/homework.component';
 
 const routes: Routes = [
@@ -20,9 +22,11 @@ const routes: Routes = [
   { path: 'forum/geography', component: GeographyComponent },
   { path: 'forum/biology', component: BiologyComponent },
   { path: 'newhomework', component: NewhomeworkComponent },
-  { path: 'homework', component: HomeworkComponent},
   { path: 'registration', component: RegisterComponent },
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: 'forum', component: PostComponent },
+  { path: 'forum/post', component: CommentComponent },
+  { path: 'homework', component: HomeworkComponent},
+  { path: '', redirectTo: '/', pathMatch: 'full' }
 ]
 
 @NgModule({

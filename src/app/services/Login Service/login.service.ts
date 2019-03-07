@@ -10,15 +10,15 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class LoginService {
 
-  baseUrl = ':8080';
+  baseUrl = 'http://10.27.6.115:8080';
 
   constructor(private http: HttpClient,
     private errorHandlingService: ErrorHandlingService) { }
 
-  login(email: string, password: string): Observable<Object> {
-    const url = this.baseUrl + `/api/login`;
+  login(username: string, password: string): Observable<Object> {
+    const url = this.baseUrl + `/api/auth/login`;
     const body = {
-      'email': `${email}`,
+      'username': `${username}`,
       'password': `${password}`
     };
     const header = {
@@ -26,9 +26,25 @@ export class LoginService {
         ({
           'Content-Type': 'application/json',
           'Accept': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest'
         })
     };
     return this.http.post<any>(url, body, header)
+      .pipe(catchError((e) => this.errorHandler(e)));
+  }
+
+  excuse(token): Observable<Object> {
+    const url = this.baseUrl + `/api/execuse`;
+  
+    const header = {
+      headers: new HttpHeaders
+        ({
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'token': `Bearer ${token}`
+        })
+    };
+    return this.http.get<any>(url, header)
       .pipe(catchError((e) => this.errorHandler(e)));
   }
 
