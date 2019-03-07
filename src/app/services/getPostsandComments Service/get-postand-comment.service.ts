@@ -11,7 +11,7 @@ import { ErrorHandlingService } from '../ErrorHandlingService/error-handling.ser
 
 export class GetPostandCommentService {
 
-  baseUrl = '10.27.6.115:8080';
+  baseUrl = 'http://10.27.6.115:8080';
 
   constructor(private http: HttpClient,
     private errorHandlingService: ErrorHandlingService) { }
@@ -20,6 +20,14 @@ export class GetPostandCommentService {
 
  getPosts(subject: string): Observable<Post[]> {
   const url = this.baseUrl + `/forum/${subject}`;
+  return this.http.get<Post[]>(url, { headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest'} })
+    .pipe(catchError((e) => this.errorHandler(e)));
+}
+
+// ---------------- GET POST ID ------------------
+
+getPostsId(id: number): Observable<Post[]> {
+  const url = this.baseUrl + `/post/${id}`;
   return this.http.get<Post[]>(url, { headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest'} })
     .pipe(catchError((e) => this.errorHandler(e)));
 }

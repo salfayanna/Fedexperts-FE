@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: '', component: LogInComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'forum/math', component: MathComponent },
+  { path: 'forum/math/post', component: CommentComponent  },
   { path: 'forum/history', component: HistoryComponent },
   { path: 'forum/literature', component: LiteratureComponent },
   { path: 'forum/geography', component: GeographyComponent },
@@ -24,7 +25,7 @@ const routes: Routes = [
   { path: 'newhomework', component: NewhomeworkComponent },
   { path: 'registration', component: RegisterComponent },
   { path: 'forum', component: PostComponent },
-  { path: 'forum/post', component: CommentComponent },
+  //{ path: 'forum/post', component: CommentComponent },
   { path: 'homework', component: HomeworkComponent},
   { path: '', redirectTo: '/', pathMatch: 'full' }
 ]

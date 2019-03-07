@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  GetPostandCommentService } from '../../services/getPostsandComments Service/get-postand-comment.service';
+import { Post } from '../../services/getPostsandComments Service/postInterface';
 
 @Component({
   selector: 'app-comment',
@@ -10,33 +11,17 @@ export class CommentComponent implements OnInit {
 
   constructor(private service: GetPostandCommentService) { }
 
+  subject: string = 'math';
+  posts: Post[] = [];
+
+
   ngOnInit() {
-  }
+    this.getpostsId(3)
+      }
+    
+      getpostsId(id){
+    this.service.getPostsId(id).subscribe(data => 
+      this.posts = data['posts'])
+      }
 
-
-
-
-  vote(direction: string) {
-    const token = localStorage.getItem('token')
-    const id: string = direction['parentElement']['parentElement'].id;
-    if (direction['alt'] === 'upvote') {
-      this.service.votePost(id, 'true', `${token}`).subscribe( // authtokent átírni dinamikusra
-        data => {
-          if (data['status'] === 200) {
-            const currentNumber = parseInt(direction['nextElementSibling'].innerText, 0);
-            direction['nextElementSibling'].innerText = currentNumber + 1;
-          }
-        }
-      );
-    } else if (direction['alt'] === 'downvote') {
-      this.service.votePost(id, 'false', `${token}`).subscribe( // authtokent átírni dinamikusra
-        data => {
-          if (data['status'] === 200) {
-            const currentNumber = parseInt(direction['previousElementSibling'].innerText, 0);
-            direction['previousElementSibling'].innerText = currentNumber - 1;
-          }
-        }
-      );
-    }
-  }
 }
