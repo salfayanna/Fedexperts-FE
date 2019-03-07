@@ -12,6 +12,10 @@ import { GeographyComponent } from './components/geography/geography.component';
 import { BiologyComponent } from './components/biology/biology.component';
 import { NewhomeworkComponent } from './components/newhomework/newhomework.component';
 import { HomeworkComponent } from './components/homework/homework.component';
+import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClientModule } from '@angular/common/http';
+import { ErrorHandlingService } from './services/ErrorHandlingService/error-handling.service';
+import { CommentComponent } from './components/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +29,13 @@ import { HomeworkComponent } from './components/homework/homework.component';
     GeographyComponent,
     BiologyComponent,
     NewhomeworkComponent,
-    HomeworkComponent
+    HomeworkComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

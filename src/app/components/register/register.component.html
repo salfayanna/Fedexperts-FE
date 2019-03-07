@@ -2,12 +2,12 @@
   <h1>Registration</h1>
   <form action="">
     <p>Username</p>
-    <input type="text" name="" id=""><br>
+    <input #username type="text" name="" id=""><br>
     <p>E-mail</p>
-    <input type="email"><br>
+    <input #email type="email"><br>
     <p>Password</p>
-    <input type="password"><br><br>
-    <button [routerLink]="['/']">Registration</button>
+    <input #password type="password"><br><br>
+    <button [routerLink]="['/']" (click)="register(username.value, email.value, password.value)">Registration</button>
     <button [routerLink]="['/']">Cancel</button>
   </form>
 </div>

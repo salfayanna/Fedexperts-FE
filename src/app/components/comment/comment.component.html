@@ -1,0 +1,10 @@
+<div class="postWithComments">
+  <div class="post">
+    <h3>{{post.title}}</h3>
+    <p>{{post.content}}</p>
+  </div>
+  <div class="comments" *ngFor="comment of comments">
+    <p>student:{{user.name}}</p><br>
+    <p>{{comment.content}}</p>
+  </div>
+</div>
