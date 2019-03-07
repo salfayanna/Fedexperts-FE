@@ -1,10 +1,17 @@
 <div class="postWithComments">
   <div class="post">
     <h3>{{post.title}}</h3>
+    <p><span>0</span>{{user.name}}</p>
     <p>{{post.content}}</p>
   </div>
-  <div class="comments" *ngFor="comment of comments">
+  <div class="comments">
     <p>student:{{user.name}}</p><br>
     <p>{{comment.content}}</p>
+  </div>
+  <div>
+    <form action="">
+      <input #newcomment type="text">
+      <button>Send</button>
+    </form>
   </div>
 </div>
