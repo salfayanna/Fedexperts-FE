@@ -15,13 +15,14 @@ export class LogInComponent implements OnInit {
   ngOnInit() {
   }
 
-  login(email, password) {
-    this.loginService.login(email, password).subscribe(
+  login(username, password) {
+    this.loginService.login(username, password).subscribe(
       data => {
+        console.log(data);
         console.log(data['token']);
         localStorage.setItem('token', data['token']);
         localStorage.setItem('role', data['role']);
-        this.router.navigateByUrl('http://localhost:4200/menu');
+        this.router.navigate(['/menu']);
       }
     )
   }
