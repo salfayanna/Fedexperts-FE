@@ -12,6 +12,7 @@ import { NewhomeworkComponent } from './components/newhomework/newhomework.compo
 import { CommentComponent } from './components/comment/comment.component';
 import { PostComponent } from './components/post/post.component';
 import { HomeworkComponent } from './components/homework/homework.component';
+import { RandomgeneratorComponent } from './components/randomgenerator/randomgenerator.component';
 
 const routes: Routes = [
   { path: '', component: LogInComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'forum', component: PostComponent },
   //{ path: 'forum/post', component: CommentComponent },
   { path: 'homework', component: HomeworkComponent},
+  { path: 'randomgenerator', component: RandomgeneratorComponent},
   { path: '', redirectTo: '/', pathMatch: 'full' }
 ]
 

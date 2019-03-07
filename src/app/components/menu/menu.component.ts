@@ -8,19 +8,8 @@ import { LoginService } from '../../services/Login Service/login.service';
 })
 export class MenuComponent implements OnInit {
 
-  randomExcuse;
-  token = localStorage.getItem('token')
-
-  constructor(private service: LoginService) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  excuse(token){
-    this.service.excuse(token).subscribe(
-      data => 
-      this.randomExcuse = data['excuse']
-      )
-      console.log(this.randomExcuse);
   }
 }

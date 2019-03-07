@@ -26,10 +26,4 @@ export class LogInComponent implements OnInit {
       }
     )
   }
-
-  login2(username, password){
-    console.log(username);
-    console.log
-  }
-
 }
