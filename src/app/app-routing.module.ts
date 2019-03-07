@@ -11,9 +11,10 @@ import { BiologyComponent } from './components/biology/biology.component';
 import { NewhomeworkComponent } from './components/newhomework/newhomework.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { PostComponent } from './components/post/post.component';
+import { HomeworkComponent } from './components/homework/homework.component';
 
 const routes: Routes = [
-  {path: '', component: LogInComponent},
+  { path: '', component: LogInComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'forum/math', component: MathComponent },
   { path: 'forum/history', component: HistoryComponent },
@@ -24,7 +25,9 @@ const routes: Routes = [
   { path: 'registration', component: RegisterComponent },
   { path: 'forum', component: PostComponent },
   { path: 'forum/post', component: CommentComponent },
-  {path: '', redirectTo: '/', pathMatch: 'full'},]
+  { path: 'homework', component: HomeworkComponent},
+  { path: '', redirectTo: '/', pathMatch: 'full' }
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

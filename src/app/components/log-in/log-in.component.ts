@@ -18,9 +18,10 @@ export class LogInComponent implements OnInit {
   login(email, password) {
     this.loginService.login(email, password).subscribe(
       data => {
+        console.log(data['token']);
         localStorage.setItem('token', data['token']);
         localStorage.setItem('role', data['role']);
-        this.router.navigateByUrl('ip/8080/menu');
+        this.router.navigateByUrl('http://localhost:4200/menu');
       }
     )
   }

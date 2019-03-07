@@ -11,6 +11,7 @@ import { LiteratureComponent } from './components/literature/literature.componen
 import { GeographyComponent } from './components/geography/geography.component';
 import { BiologyComponent } from './components/biology/biology.component';
 import { NewhomeworkComponent } from './components/newhomework/newhomework.component';
+import { HomeworkComponent } from './components/homework/homework.component';
 import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorHandlingService } from './services/ErrorHandlingService/error-handling.service';
@@ -30,7 +31,8 @@ import { PostComponent } from './components/post/post.component';
     BiologyComponent,
     NewhomeworkComponent,
     CommentComponent,
-    PostComponent
+    PostComponent,
+    HomeworkComponent
   ],
   imports: [
     BrowserModule,
