@@ -16,7 +16,7 @@ export class LoginService {
     private errorHandlingService: ErrorHandlingService) { }
 
   login(username: string, password: string): Observable<Object> {
-    const url = this.baseUrl + `/api/auth/login`;
+    const url = this.baseUrl + `/auth/login`;
     const body = {
       'username': `${username}`,
       'password': `${password}`
@@ -25,7 +25,6 @@ export class LoginService {
       headers: new HttpHeaders
         ({
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
           'X-Requested-With': 'XMLHttpRequest'
         })
     };
@@ -33,14 +32,14 @@ export class LoginService {
       .pipe(catchError((e) => this.errorHandler(e)));
   }
 
-  excuse(token): Observable<Object> {
-    const url = this.baseUrl + `/api/execuse`;
+  excuse(token:string): Observable<Object> {
+    const url = this.baseUrl + `/execuse`;
   
     const header = {
       headers: new HttpHeaders
         ({
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest',
           'token': `Bearer ${token}`
         })
     };

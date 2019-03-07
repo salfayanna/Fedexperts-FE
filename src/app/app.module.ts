@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ErrorHandlingService } from './services/ErrorHandlingService/error-handling.service';
 import { CommentComponent } from './components/comment/comment.component';
 import { PostComponent } from './components/post/post.component';
+import { RandomgeneratorComponent } from './components/randomgenerator/randomgenerator.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PostComponent } from './components/post/post.component';
     NewhomeworkComponent,
     CommentComponent,
     PostComponent,
-    HomeworkComponent
+    HomeworkComponent,
+    RandomgeneratorComponent
   ],
   imports: [
     BrowserModule,

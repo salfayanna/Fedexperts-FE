@@ -10,7 +10,7 @@ import { Homework } from './hwInterface';
 })
 export class HomeworkService {
 
-  baseUrl: '8080'
+  baseUrl: 'http://10.27.6.115:8080'
 
   constructor(private http: HttpClient,
     private errorHandlingService: ErrorHandlingService) { }
