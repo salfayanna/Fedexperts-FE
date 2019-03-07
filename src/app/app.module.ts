@@ -11,6 +11,7 @@ import { LiteratureComponent } from './components/literature/literature.componen
 import { GeographyComponent } from './components/geography/geography.component';
 import { BiologyComponent } from './components/biology/biology.component';
 import { NewhomeworkComponent } from './components/newhomework/newhomework.component';
+import { HomeworkComponent } from './components/homework/homework.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NewhomeworkComponent } from './components/newhomework/newhomework.compo
     LiteratureComponent,
     GeographyComponent,
     BiologyComponent,
-    NewhomeworkComponent
+    NewhomeworkComponent,
+    HomeworkComponent
   ],
   imports: [
     BrowserModule,
