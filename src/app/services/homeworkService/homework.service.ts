@@ -19,7 +19,7 @@ export class HomeworkService {
     const url = this.baseUrl + '/homework';
     const httpOptions = {
       headers: new HttpHeaders({
-        'accept': 'application/json', 
+        'X-Requested-With':'XMLHttpRequest', 
         'content-type': 'application/json',
       })
     };
@@ -31,11 +31,12 @@ export class HomeworkService {
     const url = this.baseUrl + '/homework';
     const httpOptions = {
       headers: new HttpHeaders({
-        'accept': 'application/json',
+        'X-Requested-With':'XMLHttpRequest',
         'content-type': 'application/json',
       })
     };
     return this.http.post(url,newHomework, httpOptions)
+    .pipe(catchError((e) => this.errorHandler(e)));
   }
   private errorHandler(error: HttpErrorResponse) {
     this.errorHandlingService.handleError(error);

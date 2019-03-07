@@ -31,33 +31,50 @@ h2 {
 
 .main {
   margin-top: 100px;
+  margin-left: 150px;
   font-size: 28px;
   padding: 0px 10px;
   text-align: center;
 }
 input {
+  width:10%;
+  height: 150px;
   font-size: 30px;
   margin-bottom: 150px;
+  display: inline-block;
+  margin-right:40px;
+  border-radius: 25%;
+  box-shadow: 0 9px #999;
+}
+
+input:active {
+  background-color: #0080FF;
+  box-shadow: 0 5px black;
+  transform: translateY(10px);
 }
 
 input.math {
-  background-color: white;
+  background-color:  rgb(232, 145, 250);
 }
 
 input.history {
-  background-color: lightgray;
+  background-color:  rgb(255, 245, 103);
 }
 
 input.literature {
-  background-color: lightgray;
+  background-color:  rgb(255, 192, 74);
 }
 
 input.geography {
-  background-color: lightgray;
+  background-color:  rgb(161, 224, 101);
 }
 
 input.biology {
-  background-color: lightgray;
+  background-color:  rgb(135, 252, 222);
+}
+
+input.art {
+  background-color:  rgb(89, 189, 255);
 }
 
 @media screen and (max-height: 450px) {
