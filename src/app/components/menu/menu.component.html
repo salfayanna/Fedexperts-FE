@@ -1,17 +1,23 @@
 <body>
-  <div class="sidenav">
+  <div class="sidenav" *ngIf="" >
     <a href="newhomework">New homework</a>
     <a href="homework">Homework</a>
     <a href="reg">random generator</a>
   </div>
+  <div class="sidenav">
+      <a href="newhomework">New homework</a>
+      <a href="homework">Homework</a>
+      <a href="reg">random generator</a>
+    </div>
   <form>
     <h2>Homework</h2>
     <div class="main">
-      <input class="math" formaction="/forum/math" type="submit" value="Math"><br>
-      <input class="history" formaction="/forum/history" type="submit" value="History"><br>
+      <input class="math" formaction="/forum/math" type="submit" value="Math">
+      <input class="history" formaction="/forum/history" type="submit" value="History">
       <input class="literature" formaction="/forum/literature" type="submit" value="Literature"><br>
-      <input class="geography" formaction="/forum/geography" type="submit" value="Geography"><br>
-      <input class="biology" formaction="/forum/biology" type="submit" value="Biology"><br>
+      <input class="geography" formaction="/forum/geography" type="submit" value="Geography">
+      <input class="biology" formaction="/forum/biology" type="submit" value="Biology">
+      <input class="art" formaction="/forum/art" type="submit" value="Art"><br>
     </div>
   </form>
   <!-- <div class="other">
