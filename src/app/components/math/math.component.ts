@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GetPostandCommentService } from '../../services/getPostsandComments Service/get-postand-comment.service';
+import { Post } from '../../services/getPostsandComments Service/postInterface';
 
 @Component({
   selector: 'app-math',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MathComponent implements OnInit {
 
-  constructor() { }
+  subject: string = 'math';
+  posts: Post[] = [];
+
+  constructor(private srevice: GetPostandCommentService) { }
 
   ngOnInit() {
+this.getposts()
   }
 
+  getposts(){
+this.srevice.getPosts(this.subject).subscribe(data => this.posts = data)
+  }
 }

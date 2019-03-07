@@ -18,9 +18,9 @@ export class GetPostandCommentService {
 
  // ---------------- GET POST ------------------
 
- getPosts(token: string, subject: string): Observable<Post[]> {
-  const url = this.baseUrl + '/posts';
-  return this.http.get<Post[]>(url, { headers: { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Token': `${token}` } })
+ getPosts(subject: string): Observable<Post[]> {
+  const url = this.baseUrl + `/forum/${subject}`;
+  return this.http.get<Post[]>(url, { headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest'} })
     .pipe(catchError((e) => this.errorHandler(e)));
 }
 
@@ -36,8 +36,8 @@ export class GetPostandCommentService {
       headers: new HttpHeaders
         ({
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
-          'AuthToken': `${token}`
+          'X-Requested-With': 'XMLHttpRequest',
+          'token': `Bearer ${token}`
         })
     };
     return this.http.post<any>(url, body, header)

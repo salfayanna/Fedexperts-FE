@@ -25,11 +25,10 @@ export class LoginService {
       headers: new HttpHeaders
         ({
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
           'X-Requested-With': 'XMLHttpRequest'
         })
     };
-    return this.http.post<any>(url, body, header)
+    return this.http.post<any>(url, body, { headers: {  'Content-Type': 'application/json',  'X-Requested-With': 'XMLHttpRequest'} })
       .pipe(catchError((e) => this.errorHandler(e)));
   }
 
@@ -40,7 +39,7 @@ export class LoginService {
       headers: new HttpHeaders
         ({
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest',
           'token': `Bearer ${token}`
         })
     };

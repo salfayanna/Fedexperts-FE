@@ -13,7 +13,7 @@ export class ErrorHandlingService implements ErrorHandler {
   constructor() { }
 
   public handleError(error) {
-    this.handleErrorSource.next(error.error.error);
+    this.handleErrorSource.next(error);
   }
 
 }

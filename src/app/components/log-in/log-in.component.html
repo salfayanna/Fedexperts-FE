@@ -2,9 +2,9 @@
   <h1>Login</h1>
   <form action="">
     <p>Username</p>
-    <input #username type="text"><br>
+    <input #username id="username" type="text"><br>
     <p>Password</p>
-    <input #password type="password" name="" id=""><br>
+    <input #password id="password" type="password"><br>
     <a [routerLink]="['/registration']">Not a member? Let's sign up!</a><br>
     <button (click)="login(username.value, password.value)">Login</button>
   </form>
