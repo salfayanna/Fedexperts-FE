@@ -9,6 +9,8 @@ import { MathComponent } from './components/math/math.component';
 import { GeographyComponent } from './components/geography/geography.component';
 import { BiologyComponent } from './components/biology/biology.component';
 import { NewhomeworkComponent } from './components/newhomework/newhomework.component';
+import { CommentComponent } from './components/comment/comment.component';
+import { PostComponent } from './components/post/post.component';
 
 const routes: Routes = [
   {path: '', component: LogInComponent},
@@ -18,8 +20,10 @@ const routes: Routes = [
   { path: 'forum/literature', component: LiteratureComponent },
   { path: 'forum/geography', component: GeographyComponent },
   { path: 'forum/biology', component: BiologyComponent },
-  { path: 'newhomework', component: NewhomeworkComponent},
-  {path: 'registration', component: RegisterComponent},
+  { path: 'newhomework', component: NewhomeworkComponent },
+  { path: 'registration', component: RegisterComponent },
+  { path: 'forum', component: PostComponent },
+  { path: 'forum/post', component: CommentComponent },
   {path: '', redirectTo: '/', pathMatch: 'full'},]
 
 @NgModule({

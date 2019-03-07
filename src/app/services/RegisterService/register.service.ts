@@ -9,7 +9,7 @@ import { ErrorHandlingService } from '../ErrorHandlingService/error-handling.ser
 })
 export class RegisterService {
 
-  baseUrl = ':8080';
+  baseUrl = '10.27.6.115:8080';
 
   constructor(private http: HttpClient,
     private errorHandlingService: ErrorHandlingService) { }

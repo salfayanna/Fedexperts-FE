@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class LoginService {
 
-  baseUrl = ':8080';
+  baseUrl = '10.27.6.115:8080';
 
   constructor(private http: HttpClient,
     private errorHandlingService: ErrorHandlingService) { }

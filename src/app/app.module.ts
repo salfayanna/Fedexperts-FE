@@ -15,6 +15,7 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorHandlingService } from './services/ErrorHandlingService/error-handling.service';
 import { CommentComponent } from './components/comment/comment.component';
+import { PostComponent } from './components/post/post.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CommentComponent } from './components/comment/comment.component';
     GeographyComponent,
     BiologyComponent,
     NewhomeworkComponent,
-    CommentComponent
+    CommentComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
